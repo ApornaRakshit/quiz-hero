@@ -23,8 +23,8 @@ startQuiz.addEventListener("click", () => {
 
   let x = setInterval(() => {
     if (counterNum < 0) {
-      countDown.classList.remove("flex");
-      countDown.classList.add("hidden");
+      countDown.classList.remove("flex");   //countDown error fixed
+      countDown.classList.add("hidden");    //countDown error fixed
       counterNum = 3;
       count = 0;
       timer = null;
@@ -46,7 +46,7 @@ startQuiz.addEventListener("click", () => {
 // All quiz data fetched from json
 const loadQuiz = async () => {
   const res = await fetch("./data/quiz.json");
-  const data = await res.json();
+  const data = await res.json();          //json() error fixed
   quizData = data;
   displayQuiz(data);
 };
@@ -54,7 +54,7 @@ const loadQuiz = async () => {
 // Displaying quiz on quiz page
 const displayQuiz = (data) => {
   if (!data) {
-    quizContainer.innerHTML = "";
+    quizContainer.innerHTML = "";  // class-->id fixed in html
     return;
   }
 
@@ -74,7 +74,7 @@ const displayQuiz = (data) => {
 };
 
 // EventListener for quiz submit button
-document.querySelector("#submit").addEventListener("click", () => {
+document.querySelector("#submit").addEventListener("click", () => { //camelCase
   if (answers.length < 6) {
     return;
   }
@@ -108,7 +108,7 @@ document.querySelector("#submit").addEventListener("click", () => {
   }
 
   // data setting on local storage and getting data from local storage
-  let storage = JSON.parse(localStorage.getItem("results"));
+  let storage = JSON.parse(localStorage.getItem("results")); //result-->results
   if (storage) {
     localStorage.setItem(
       "results",
