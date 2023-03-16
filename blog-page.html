@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog-page Q & A</title>
+                    <!--style by css-->
+<style>     
+                        .faq {
+                        width:70%;
+                        margin: 0 auto;
+                        }
+                        .faq div {
+                        margin: 5px 0px;
+                        background-color:#fff;
+                        }
+                        .question {
+                        font-size:18px;
+                        background-color: rgb(214, 247, 214);
+                        margin:0px;
+                        padding: 15px;
+                        }
+                        .answer {
+                        font-size:16px;
+                        margin:0px;
+                        padding: 0px 15px;
+                        line-height:2;
+                        max-height:0px;
+                        overflow:hidden;
+                        transition:2s;
+                        }
+                        .opener
+                        {
+                        font-size:25px;
+                        float: right;
+                        line-height:0.8;
+                        cursor: pointer;
+                        }
+</style>      
+</head>
+<body>
+             <!--Question and answer part-->
+    <div class="faq">
+        <div id="block">
+         <p class="question">Difference among <b>.map(), .filter(), .forEach(), .find().</b> <span onclick='faq(this)' class="opener">+</span></p>
+         <p class="answer">
+            <b>.map():</b> When need to return value and don't want to change the original array then continue with map().The map() method is used to transform the elements of an array<br>
+            <b>.filter():</b> filter() returns an array of found results, if any, even if only one match is found. If the function does not find any match, it returns an empty array. <br>
+            <b>.forEach():</b> The forEach() method does not return a new array. It is used to loop through the elements of an array. <br>
+            <b>.find():</b> The find() method also does not change the original array, if no elements are found and this method returns undefined.		
+         </p>
+        </div>
+        <div id="block">
+         <p class="question">Difference among <b>Local storage, session storage, cookies</b> <span onclick='faq(this)' class="opener">+</span></p>
+         <p class="answer">
+            <b>Local storage:</b> Local storage is used to storing data that the user will need to access later, such as offline data.If save data as boolean or others, it converts data to string.It save data as string type only. Local storage can't put object(JSON.parse). The data is stored on the browser and system.<br>
+            <b>Session storage:</b> The data is only stored for the current session. The data will be deleted when the user closes the browser.cookies are saved on the client side. The data is stored on the browser only.<br>
+            <b>Cookies</b> Cookies are a good choice for storing data that should not be persisted for a long time.The data is stored on the browser only. <br>	
+         </p>
+        </div>
+        <div id="block">
+         <p class="question">What is <b>Event loop</b>? How does it work? <span onclick='faq(this)' class="opener">+</span></p>
+         <p class="answer">
+            An event loop is something that pulls stuff out of the queue and places it onto the function execution stack whenever the function stack becomes empty. Event loop continuously observes call stack and when it is empty it transfers task to call stack.		
+         </p>
+        </div>
+        <div id="block">
+         <p class="question">What type of work <b>quizTimer()</b> do?<span onclick='faq(this)' class="opener">+</span></p>
+         <p class="answer">
+            An event loop is something that pulls stuff out of the queue and places it onto the function execution stack whenever the function stack becomes empty. Event loop continuously observes call stack and when it is empty it transfers task to call stack.		
+         </p>
+        </div>
+        <div id="block">
+         <p class="question">What type of work <b>chooseQuiz()</b> do? <span onclick='faq(this)' class="opener">+</span></p>
+         <p class="answer">
+            An event loop is something that pulls stuff out of the queue and places it onto the function execution stack whenever the function stack becomes empty. Event loop continuously observes call stack and when it is empty it transfers task to call stack.		
+         </p>
+        </div>
+        
+        </div>
+        <!-------------javascript part----------->
+<script>          
+function faq(ele)
+{
+let text = ele.parentElement.nextElementSibling.style.cssText;
+if(text=='max-height: 500px;')
+{    
+ele.style.cssText='transform: rotate(0deg);';     
+ele.parentElement.nextElementSibling.style.cssText ="max-height:0px;";    
+}
+else
+{
+ele.parentElement.nextElementSibling.style.cssText = "max-height:200px;";
+}
+}
+</script>       
+</body>
+</html>
